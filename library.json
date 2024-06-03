@@ -1,0 +1,24 @@
+{
+  "name": "LogSerial",
+  "version": "0.1.0",
+  "description": "",
+  "keywords": "serial, logging",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://gitlab.com/gustavsvik/embedded/logserial"
+  },
+  "authors":
+  [
+    {
+      "name": "Daniel Nilsson",
+      "email": "daniel.nilsson@gustavsvik.eu",
+      "url": "https://gustavsvik.eu",
+      "maintainer": true
+    }
+  ],
+  "license": "MIT",
+  "homepage": "https://gitlab.com/gustavsvik/embedded/logserial",
+  "frameworks": "*",
+  "platforms": "esp8266"
+}
