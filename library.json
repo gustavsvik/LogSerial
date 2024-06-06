@@ -19,6 +19,6 @@
   ],
   "license": "MIT",
   "homepage": "https://gitlab.com/gustavsvik/embedded/logserial",
-  "frameworks": "*",
+  "frameworks": "arduino",
   "platforms": "esp8266"
 }
