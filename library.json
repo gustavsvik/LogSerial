@@ -1,7 +1,7 @@
 {
   "name": "LogSerial",
   "version": "0.1.0",
-  "description": "",
+  "description": "Simple wrapper library for logging to the standard serial port of the Arduino framework",
   "keywords": "serial, logging",
   "repository":
   {
