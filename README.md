@@ -4,4 +4,4 @@
 
 ## Simple Arduino based serial port logger
 
-Simple library for logging to standard serial port.
+Simple wrapper library for logging to the standard serial port. Tested on ESP8266 but should work for vanilla Arduino boards like the Uno as well.
