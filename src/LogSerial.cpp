@@ -11,62 +11,62 @@
    value greater than the default LOGLIMITLEVEL or whichever value of a_log_limit_level that the default is overridden 
    by in the constructor.*/
 
-Log(int a_baud_rate, int a_log_limit_level) : m_baud_rate(a_baud_rate), m_log_limit_level(a_log_limit_level)
+Log::Log(int a_baud_rate, int a_log_limit_level) : m_baud_rate(a_baud_rate), m_log_limit_level(a_log_limit_level)
 {
   Serial.begin(this->m_baud_rate);
 }
 
-void write(int a_logged_int, int a_log_level) 
+void Log::write(int a_logged_int, int a_log_level) 
 { 
   if (a_log_level >= this->m_log_limit_level) Serial.print(a_logged_int);
 }
 
-void write(const char* a_logged_string, int a_log_level) 
+void Log::write(const char* a_logged_string, int a_log_level) 
 { 
   if (a_log_level >= this->m_log_limit_level) Serial.print(a_logged_string);
 }
 
-void write(char a_logged_char, int a_log_level) 
+void Log::write(char a_logged_char, int a_log_level) 
 { 
   if (a_log_level >= this->m_log_limit_level) Serial.print(a_logged_char);
 }
 
-void write(String a_logged_string, int a_log_level) 
+void Log::write(String a_logged_string, int a_log_level) 
 { 
   if (a_log_level >= this->m_log_limit_level) Serial.print(a_logged_string);
 }
 
-void write_hex(int a_logged_int, int a_log_level) 
+void Log::write_hex(int a_logged_int, int a_log_level) 
 { 
   if (a_log_level >= this->m_log_limit_level) Serial.print(a_logged_int, HEX);
 }
 
-void linefeed(int a_log_level) 
+void Log::linefeed(int a_log_level) 
 { 
   if (a_log_level >= this->m_log_limit_level) Serial.println();
 }
 
-void writeln(int a_logged_int, int a_log_level) 
+void Log::writeln(int a_logged_int, int a_log_level) 
 { 
   if (a_log_level >= this->m_log_limit_level) Serial.println(a_logged_int);
 }
 
-void writeln(const char* a_logged_string, int a_log_level) 
+void Log::writeln(const char* a_logged_string, int a_log_level) 
 { 
   if (a_log_level >= this->m_log_limit_level) Serial.println(a_logged_string);
 }
 
-void writeln(char a_logged_char, int a_log_level) 
+void Log::writeln(char a_logged_char, int a_log_level) 
 { 
   if (a_log_level >= this->m_log_limit_level) Serial.println(a_logged_char);
 }
 
-void writeln(String a_logged_string, int a_log_level) 
+void Log::writeln(String a_logged_string, int a_log_level) 
 { 
   if (a_log_level >= this->m_log_limit_level) Serial.println(a_logged_string);
 }
 
-void writeln_hex(int a_logged_int, int a_log_level) 
+void Log::writeln_hex(int a_logged_int, int a_log_level) 
 { 
   if (a_log_level >= this->m_log_limit_level) Serial.println(a_logged_int, HEX);
 }
@@ -76,11 +76,11 @@ void writeln_hex(int a_logged_int, int a_log_level)
    (useful) operations irrespective of argument(s), i.e. hardware serial port logging will effectively be disabled on 
    a global level at compile time. */
 
-Log(...) {}
-void write(...) {}
-void write_hex(...) {}
-void linefeed(...) {}
-void writeln(...) {}
-void writeln_hex(...) {}
+Log::Log(...) {}
+void Log::write(...) {}
+void Log::write_hex(...) {}
+void Log::linefeed(...) {}
+void Log::writeln(...) {}
+void Log::writeln_hex(...) {}
 
 #endif
