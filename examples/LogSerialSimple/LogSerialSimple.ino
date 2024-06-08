@@ -1,5 +1,3 @@
-#include <Arduino.h>
-
 #include <LogSerial.h>
 
 Log logger(115200, 1);
