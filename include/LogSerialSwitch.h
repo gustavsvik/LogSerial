@@ -2,7 +2,7 @@
 #define _LOGSERIALSWITCH_h
 
 
-#define LOGLIMITLEVEL 1
+#define LOGLIMITLEVEL 0
 
 
 #endif
