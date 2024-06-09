@@ -11,62 +11,62 @@
 
 Log::Log(int a_baud_rate, int a_log_limit_level) : m_baud_rate(a_baud_rate), m_log_limit_level(a_log_limit_level)
 {
-  Serial.begin(this->m_baud_rate);
+  ::Serial.begin(this->m_baud_rate);
 }
 
 void Log::write(int a_logged_int, int a_log_level) 
 { 
-  if (a_log_level >= this->m_log_limit_level) Serial.print(a_logged_int);
+  if (a_log_level >= this->m_log_limit_level) ::Serial.print(a_logged_int);
 }
 
 void Log::write(const char* a_logged_string, int a_log_level) 
 { 
-  if (a_log_level >= this->m_log_limit_level) Serial.print(a_logged_string);
+  if (a_log_level >= this->m_log_limit_level) ::Serial.print(a_logged_string);
 }
 
 void Log::write(char a_logged_char, int a_log_level) 
 { 
-  if (a_log_level >= this->m_log_limit_level) Serial.print(a_logged_char);
+  if (a_log_level >= this->m_log_limit_level) ::Serial.print(a_logged_char);
 }
 
 void Log::write(String a_logged_string, int a_log_level) 
 { 
-  if (a_log_level >= this->m_log_limit_level) Serial.print(a_logged_string);
+  if (a_log_level >= this->m_log_limit_level) ::Serial.print(a_logged_string);
 }
 
 void Log::write_hex(int a_logged_int, int a_log_level) 
 { 
-  if (a_log_level >= this->m_log_limit_level) Serial.print(a_logged_int, HEX);
+  if (a_log_level >= this->m_log_limit_level) ::Serial.print(a_logged_int, HEX);
 }
 
 void Log::linefeed(int a_log_level) 
 { 
-  if (a_log_level >= this->m_log_limit_level) Serial.println();
+  if (a_log_level >= this->m_log_limit_level) ::Serial.println();
 }
 
 void Log::writeln(int a_logged_int, int a_log_level) 
 { 
-  if (a_log_level >= this->m_log_limit_level) Serial.println(a_logged_int);
+  if (a_log_level >= this->m_log_limit_level) ::Serial.println(a_logged_int);
 }
 
 void Log::writeln(const char* a_logged_string, int a_log_level) 
 { 
-  if (a_log_level >= this->m_log_limit_level) Serial.println(a_logged_string);
+  if (a_log_level >= this->m_log_limit_level) ::Serial.println(a_logged_string);
 }
 
 void Log::writeln(char a_logged_char, int a_log_level) 
 { 
-  if (a_log_level >= this->m_log_limit_level) Serial.println(a_logged_char);
+  if (a_log_level >= this->m_log_limit_level) ::Serial.println(a_logged_char);
 }
 
 void Log::writeln(String a_logged_string, int a_log_level) 
 { 
-  if (a_log_level >= this->m_log_limit_level) Serial.println(a_logged_string);
+  if (a_log_level >= this->m_log_limit_level) ::Serial.println(a_logged_string);
 }
 
 void Log::writeln_hex(int a_logged_int, int a_log_level) 
 { 
-  if (a_log_level >= this->m_log_limit_level) Serial.println(a_logged_int, HEX);
+  if (a_log_level >= this->m_log_limit_level) ::Serial.println(a_logged_int, HEX);
 }
 
 #else
