@@ -1,6 +1,8 @@
 #ifndef _LOGSERIAL_h
 #define _LOGSERIAL_h
 
+#include "Arduino.h"
+
 #include <LogSerialSwitch.h>
 
 class Log
